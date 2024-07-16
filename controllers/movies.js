@@ -1,10 +1,14 @@
 import Movie from "../models/movie.js";
 import User from "../models/user.js";
 import { createFilter } from "../lib/filter.js";
-import { validateQueryGetMovies } from "../lib/validation.js";
+import { validationResult } from "express-validator";
 
-export const getMovies = async (req, res) => {
+export const getMovies = async (req, res, next) => {
   try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: errors.array() });
+    }
     const {
       limit = 10,
       page = 1,
@@ -12,11 +16,6 @@ export const getMovies = async (req, res) => {
       sortBy = "id",
       ...query
     } = req.query;
-
-    if (!validateQueryGetMovies({ limit, page, orderBy, sortBy }))
-      return res
-        .status(400)
-        .json({ error: "Invalid limit or page or sort or order" });
     const filter = createFilter(query);
     const movies = await Movie.find(filter)
       .limit(limit)
@@ -24,7 +23,7 @@ export const getMovies = async (req, res) => {
       .skip((page - 1) * limit);
     res.json(movies);
   } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    return next(error);
   }
 };
 

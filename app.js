@@ -3,6 +3,7 @@ import movieRouter from "./routers/movies.js";
 import userRouter from "./routers/auth.js";
 import connectDB from "./lib/db.js";
 import { logs } from "./middleware/logs.js";
+import { errorHandler } from "./middleware/error.js";
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use("/api/auth", userRouter);
 app.get("/", (req, res) => {
   res.send({ message: "Hello World" });
 });
+
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
