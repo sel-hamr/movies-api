@@ -1,5 +1,16 @@
 # Movies API
 
+## Table of Contents
+
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Endpoints](#endpoints)
+- [Configuring](#configuring)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 ## Description
 
 A simple movies API built with Node.js, Express, and MongoDB.
@@ -55,7 +66,7 @@ A simple movies API built with Node.js, Express, and MongoDB.
 - POST api/auth/create-user - Create a new user
 - POST api/auth/login - Authenticate a user
 
-### Configuring
+## Configuring
 
 - Update the database connection string in `./lib/db.js` to point to your MongoDB instance.
 - Modify the routes as per your application's requirements.
