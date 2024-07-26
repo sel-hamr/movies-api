@@ -30,7 +30,14 @@ export const getMovies = async (req, res, next) => {
 export const getMovieById = async (req, res) => {
   try {
     const { id } = req.params;
-    const movie = await Movie.findOne({ id: Number(id) });
+    const movie = await Movie.findOne({ id: Number(id) }).populate({
+      path: "comments",
+      populate: {
+        path: "userId",
+        select: "username",
+      },
+      options: { toJSON: { virtuals: true }, toObject: { virtuals: true } },
+    });
     if (!movie) {
       return res.status(404).json({ error: "Movie not found" });
     }

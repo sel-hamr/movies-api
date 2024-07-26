@@ -1,6 +1,7 @@
 import express from "express";
 import movieRouter from "./routers/movies.js";
 import userRouter from "./routers/auth.js";
+import commentRouter from "./routers/comment.js";
 import connectDB from "./lib/db.js";
 import { logs } from "./middleware/logs.js";
 import { errorHandler } from "./middleware/error.js";
@@ -14,6 +15,7 @@ app.use(logs);
 app.use(express.json());
 app.use("/api/movies", movieRouter);
 app.use("/api/auth", userRouter);
+app.use("/api/comments", commentRouter);
 
 app.get("/", (req, res) => {
   res.send({ message: "Hello World" });

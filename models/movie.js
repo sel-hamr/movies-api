@@ -47,6 +47,12 @@ const movieSchema = new mongoose.Schema({
       href: { type: String, required: true },
     },
   },
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
 export default mongoose.model("Movie", movieSchema);
