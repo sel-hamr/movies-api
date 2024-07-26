@@ -13,13 +13,19 @@
 
 ## Description
 
-A simple movies API built with Node.js, Express, and MongoDB.
+A simple movies API built with Node.js, Express, and MongoDB. The API allows users to add, update, delete, likes and retrieve comment movies. It also includes user authentication and authorization, input validation, and error handling.
 
 ## Features
 
 - Add, update, delete, and retrieve movies.
 - User authentication and authorization.
 - Input validation and error handling.
+- User can add favorite movies.
+- User can retrieve movies who have favorite by user.
+- User can add comment to movie.
+- User can retrieve comment by movie.
+- User can like comment.
+- User can retrieve comment who have like by user.
 
 ## Installation
 
@@ -65,6 +71,11 @@ A simple movies API built with Node.js, Express, and MongoDB.
 - POST api/movies/favorite/:id - add favorite movie by user
 - POST api/auth/create-user - Create a new user
 - POST api/auth/login - Authenticate a user
+- POST api/comments/:id - Add comment to movie
+- POST api/comments/like/:id - Like comment
+- POST api/comments/dislike/:id - Dislike comment
+- PUT api/comments/:id - Update comment
+- DELETE api/comments/:id - Delete comment
 
 ## Configuring
 
