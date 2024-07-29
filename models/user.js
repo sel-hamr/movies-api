@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   favoritesMovies: [{ type: Schema.Types.ObjectId, ref: "Movie" }],
   likesMovies: [{ type: Schema.Types.ObjectId, ref: "Movie" }],
+  friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
 });
 
 export default mongoose.model("User", userSchema);

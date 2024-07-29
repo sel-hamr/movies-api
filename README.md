@@ -13,7 +13,9 @@
 
 ## Description
 
-A simple movies API built with Node.js, Express, and MongoDB. The API allows users to add, update, delete, likes and retrieve comment movies. It also includes user authentication and authorization, input validation, and error handling.
+A simple movies API built with Node.js, Express, and MongoDB. The API allows users to add, update, delete, likes and retrieve comment movies. It also includes user authentication and authorization, input validation, and error handling. The API is secured using JWT tokens and includes middleware to restrict access to certain routes.
+and also user can add favorite movies and retrieve movies who have favorite by user.
+and user can add comment to movie and retrieve comment by movie and like comment and retrieve comment who have like by user. and user can dislike comment. and user can send friend request and retrieve friend request and accept friend request and retrieve friend and retrieve friend request by user. and send a message in real time and retrieve message by user and retrieve message by friend. and user can retrieve all message by user and friend. and user have notification when he receive a message or friend request. and user can retrieve all notification by user. and user can delete friend by user. and user can delete message by user. and user can delete friend request by user. and user can retrieve all friend by user. and user can retrieve all message by user. and user can retrieve all friend request
 
 ## Features
 
@@ -26,6 +28,20 @@ A simple movies API built with Node.js, Express, and MongoDB. The API allows use
 - User can retrieve comment by movie.
 - User can like comment.
 - User can retrieve comment who have like by user.
+- User can dislike comment.
+- User can send friend request.
+- User can retrieve friend request.
+- User can accept friend request.
+- User can retrieve friend.
+- User can retrieve friend request by user.
+- User can send a message in real time.
+- User can retrieve message by user.
+- User can retrieve all message by user and friend.
+- User have notification when he receive a message or friend request.
+- User can retrieve all notification by user.
+- User can delete friend by user.
+- User can delete message by user.
+- User can delete friend request by user.
 
 ## Installation
 
