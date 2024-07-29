@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   favoritesMovies: [{ type: Schema.Types.ObjectId, ref: "Movie" }],
   likesMovies: [{ type: Schema.Types.ObjectId, ref: "Movie" }],
   friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  isLogin: { type: Boolean, default: false },
 });
 
 export default mongoose.model("User", userSchema);
