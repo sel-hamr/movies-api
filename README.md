@@ -92,6 +92,13 @@ and user can add comment to movie and retrieve comment by movie and like comment
 - POST api/comments/dislike/:id - Dislike comment
 - PUT api/comments/:id - Update comment
 - DELETE api/comments/:id - Delete comment
+- POST api/friendship/request/:recipientId - Send friend request
+- GET api/friendship - Retrieve friend request
+- POST api/friendship/accept/:friendshipId - Accept friend request
+- POST api/friendship/reject/:friendshipId - Accept friend request
+- POST api/notification - Retrieve notification
+- GET api/notification - Retrieve all notification
+- PUT api/notification/:id/read - Delete friend
 
 ## Configuring
 
