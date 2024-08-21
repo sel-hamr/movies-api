@@ -4,6 +4,7 @@ import userRouter from "./routers/auth.js";
 import commentRouter from "./routers/comment.js";
 import friendshipRouter from "./routers/friendship.js";
 import notification from "./routers/notification.js";
+import groupRouter from "./routers/group.js";
 import { createServer } from "node:http";
 import connectDB from "./lib/db.js";
 import { logs } from "./middleware/logs.js";
@@ -26,6 +27,7 @@ app.use("/api/auth", userRouter);
 app.use("/api/comments", commentRouter);
 app.use("/api/friendship", friendshipRouter);
 app.use("/api/notifications", notification);
+app.use("/api/groups", groupRouter);
 
 app.get("/", (req, res) => {
   res.send({ message: "Hello World" });

@@ -42,6 +42,14 @@ and user can add comment to movie and retrieve comment by movie and like comment
 - User can delete friend by user.
 - User can delete message by user.
 - User can delete friend request by user.
+- User can create a group.
+- User can add friend to group.
+- User can retrieve group by user.
+- User can retrieve group by friend.
+- User can retrieve all group by user.
+- User can retrieve all group by friend.
+- User can delete group by user.
+- User can send message in group.
 
 ## Installation
 
